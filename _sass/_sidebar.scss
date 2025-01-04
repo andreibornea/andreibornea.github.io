@@ -268,7 +268,7 @@
         border-right: none; /* remove the vertical border if you prefer */
         box-shadow: none;   /* remove shadow for a flatter look (optional) */
         margin-bottom: 1em; /* or keep as you like */
-    
+        color: grey;
         /* Center contents horizontally & vertically if you want a "bar" look */
         display: flex;     
         flex-direction: column; 
@@ -284,7 +284,7 @@
       /* Center the avatar image */
       .sidebar .author__avatar {
         margin-bottom: 0.5em; /* some spacing */
-        text-align: center;
+        text-align: left;
     
         img {
           /* smaller size for mobile */
@@ -311,6 +311,7 @@
       /* Style the Follow button */
       .sidebar .follow-btn {
         display: inline-block;
+        text-align: right;
         margin: 0.5em 0; 
         padding: 0.6em 1.2em;
         font-size: $type-size-6; /* or a numeric fallback like 16px */
@@ -320,7 +321,6 @@
         color: #333;
         cursor: pointer;
         transition: background-color 0.3s ease;
-    
         &:hover,
         &:focus {
           background-color: #333;

@@ -74,6 +74,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  .archive__item-teaser img {
+      max-width: 300px; 
+      margin: 0 auto;
+  }
+}
+
 .archive__item:hover {
   .archive__item-teaser {
     box-shadow: 0 0 10px rgba(#000, 0.25);

@@ -255,76 +255,62 @@
   /* ==========================================================================
      MOBILE MODIFICATIONS 
      ========================================================================== */
-   
      @media (max-width: 768px) {
       .sidebar {
-        /* Make sure the sidebar is visible (not off-canvas).
-           You could either keep it as a full-width top bar
-           or a partial section. Up to you. */
-        position: static;   /* or relative */
-        width: 100%;        /* or 90%, or whatever you prefer */
+        position: static;
+        width: 100%;
         max-width: none;
         height: auto;
-        border-right: none; /* remove the vertical border if you prefer */
-        box-shadow: none;   /* remove shadow for a flatter look (optional) */
-        margin-bottom: 1em; /* or keep as you like */
-        color: grey;
-        /* Center contents horizontally & vertically if you want a "bar" look */
-        display: flex;     
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: center;
+        background-color: #f0f0f0; /* Grey background */
+        border-right: none;
+        box-shadow: none;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: row; /* Arrange contents horizontally */
+        align-items: center;
+        justify-content: space-between; /* Space out photo and button */
         padding: 1em;
       }
-
-      .sidebar .additional-logos {
-        display: none;
-      }
     
-      /* Center the avatar image */
       .sidebar .author__avatar {
-        margin-bottom: 0.5em; /* some spacing */
         text-align: left;
-    
-        img {
-          /* smaller size for mobile */
-          max-width: 80px; 
-          height: auto;
-          border-radius: 50%;
-          display: block;
-          margin: 0 auto;
-        }
+        flex-shrink: 0; /* Ensure the image doesn't shrink */
+        margin-right: 1em; /* Add space between photo and text */
       }
     
-      /* Center text, reduce spacing if needed */
+      .sidebar .author__avatar img {
+        max-width: 80px; /* Adjust size for mobile */
+        height: auto;
+        border-radius: 50%;
+      }
+    
       .sidebar .author__content {
-        text-align: center;
+        flex-grow: 1; /* Use remaining space for text */
+        text-align: left;
       }
     
       .sidebar .author__name {
         margin: 0.5em 0;
-        /* You can adjust the font-size for mobile if needed, e.g.:
-        font-size: $type-size-6;
-        */
+        font-size: 16px; /* Adjust font size for mobile */
       }
     
-      /* Style the Follow button */
       .sidebar .follow-btn {
-        display: inline-block;
-        text-align: right;
-        margin: 0.5em 0; 
+        flex-shrink: 0; /* Ensure button doesn't shrink */
+        margin-left: auto; /* Align button to the right */
         padding: 0.6em 1.2em;
-        font-size: $type-size-6; /* or a numeric fallback like 16px */
-        border: 2px solid #333;  /* or brand color */
+        font-size: 14px; /* Adjust font size */
+        border: 2px solid #0074d9; /* Brand color */
         border-radius: 4px;
         background-color: transparent;
-        color: #333;
+        color: #0074d9;
         cursor: pointer;
-        transition: background-color 0.3s ease;
-        &:hover,
-        &:focus {
-          background-color: #333;
-          color: #fff;
-        }
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+    
+      .sidebar .follow-btn:hover,
+      .sidebar .follow-btn:focus {
+        background-color: #0074d9;
+        color: #fff;
       }
     }
+    

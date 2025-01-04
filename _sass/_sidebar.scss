@@ -255,99 +255,72 @@
   /* ==========================================================================
      MOBILE MODIFICATIONS 
      ========================================================================== */
-  
-  /* Hide additional logos on mobile */
-  @media (max-width: 768px) {
-    .additional-logos {
-      display: none;
-    }
-  }
-  
-  /* Adjust images for mobile (was already in your code) */
-  @media (max-width: 768px) {
-    .sidebar img {
-      width: 80%;
-      max-width: 60px;
-      height: auto;
-      margin: 5px;
-    }
-  }
-  
-  /* 
-     1) Make the sidebar off-canvas by default on mobile
-     2) Slide it in/out with a .sidebar--active class
-     3) Add a futuristic background style
-  */
-  @media (max-width: 768px) {
-    .sidebar {
-      /* Position off-screen */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 80%;
-      max-width: 300px;
-      height: 100%;
-      z-index: 9999;
-      transform: translateX(-100%);
-      transition: transform 0.4s ease-in-out;
-      
-      /* Remove the thick border on mobile (optional) */
-      border-right: none;
-      
-      /* Futuristic background (pick one style):
-         - Glassmorphism:
-            background-color: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(10px);
-  
-         - OR a gradient:
-      */
-      background: linear-gradient(135deg, #a7c5f9 0%, #e3b0ff 100%);
-      
-      /* Slight box-shadow to float above content */
-      box-shadow: 2px 0 12px rgba(#000, 0.15);
-  
-      /* Spacing & scroll if needed */
-      padding: 1em;
-      overflow-y: auto;
-    }
-  
-    .sidebar.sidebar--active {
-      /* Slide it into view */
-      transform: translateX(0);
-    }
-  
-    /* Tweak the author area for mobile */
-    .author__avatar {
-      display: block;
-      margin-bottom: 1em;
-      text-align: center;
-  
-      img {
-        /* Slightly smaller for mobile, add a border to stand out */
-        max-width: 100px;
-        margin: 0 auto;
-        border: 2px solid #fff;
-        border-radius: 50%;
+   
+     @media (max-width: 768px) {
+      .sidebar {
+        /* Make sure the sidebar is visible (not off-canvas).
+           You could either keep it as a full-width top bar
+           or a partial section. Up to you. */
+        position: static;   /* or relative */
+        width: 100%;        /* or 90%, or whatever you prefer */
+        max-width: none;
+        height: auto;
+        border-right: none; /* remove the vertical border if you prefer */
+        box-shadow: none;   /* remove shadow for a flatter look (optional) */
+        margin-bottom: 1em; /* or keep as you like */
+    
+        /* Center contents horizontally & vertically if you want a "bar" look */
+        display: flex;     
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        padding: 1em;
       }
-    }
-  
-    .author__content {
-      display: block;
-      text-align: center;
-      padding-left: 0;
-      padding-right: 0;
-  
-      .author__name {
-        font-size: $type-size-6; /* slightly smaller text */
+    
+      /* Center the avatar image */
+      .sidebar .author__avatar {
+        margin-bottom: 0.5em; /* some spacing */
+        text-align: center;
+    
+        img {
+          /* smaller size for mobile */
+          max-width: 80px; 
+          height: auto;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    
+      /* Center text, reduce spacing if needed */
+      .sidebar .author__content {
+        text-align: center;
+      }
+    
+      .sidebar .author__name {
         margin: 0.5em 0;
+        /* You can adjust the font-size for mobile if needed, e.g.:
+        font-size: $type-size-6;
+        */
       }
-  
-      .author__bio {
-        font-size: $type-size-7;
-        max-width: 250px;
-        margin: 0 auto 1em;
-        line-height: 1.4;
+    
+      /* Style the Follow button */
+      .sidebar .follow-btn {
+        display: inline-block;
+        margin: 0.5em 0; 
+        padding: 0.6em 1.2em;
+        font-size: $type-size-6; /* or a numeric fallback like 16px */
+        border: 2px solid #333;  /* or brand color */
+        border-radius: 4px;
+        background-color: transparent;
+        color: #333;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    
+        &:hover,
+        &:focus {
+          background-color: #333;
+          color: #fff;
+        }
       }
     }
-  }
-  

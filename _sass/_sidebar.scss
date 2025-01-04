@@ -271,7 +271,7 @@
         justify-content: space-between; /* Space out photo and button */
         padding: 1em;
       }
-      
+
       .sidebar .additional-logos {
         display: none;
       }
@@ -292,6 +292,7 @@
       .sidebar .author__content {
         flex-grow: 1; /* Use remaining space for text */
         text-align: left;
+        font-size: 10px;
       }
     
       .sidebar .author__name {
@@ -301,7 +302,7 @@
     
       .sidebar .follow-btn {
         flex-shrink: 0; /* Ensure button doesn't shrink */
-        margin-left: auto; /* Align button to the right */
+        margin-left: 5px; /* Align button to the right */
         padding: 0.6em 1.2em;
         font-size: 14px; /* Adjust font size */
         border: 2px solid #0074d9; /* Brand color */

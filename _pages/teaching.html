@@ -168,4 +168,20 @@ author_profile: true
   border-radius: 4px;
   border: 1px solid #e9ecef;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .timeline:before {
+    left: 10px;
+  }
+  .timeline-item .timeline-date {
+    position: static;
+    width: auto;
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  .timeline-item .timeline-content {
+    margin-left: 20px;
+  }
+}
 </style>

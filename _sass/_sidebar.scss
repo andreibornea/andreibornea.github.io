@@ -271,6 +271,11 @@
         justify-content: space-between; /* Space out photo and button */
         padding: 1em;
       }
+      
+      .sidebar .additional-logos {
+        display: none;
+      }
+    
     
       .sidebar .author__avatar {
         text-align: left;

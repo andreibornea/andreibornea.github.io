@@ -30,7 +30,7 @@ If you’d like to collaborate, discuss a project, or just connect, feel free to
 
 For further exploration, please check out:
 - [Publications](/publications/)
-- [Portfolio](/portfolio/)
+- [Open-source software](/portfolio/)
 - [CV](/cv/)
 
 Thank you for visiting!

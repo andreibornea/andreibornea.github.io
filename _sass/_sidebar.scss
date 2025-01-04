@@ -276,6 +276,10 @@
         justify-content: center;
         padding: 1em;
       }
+
+      .sidebar .additional-logos {
+        display: none;
+      }
     
       /* Center the avatar image */
       .sidebar .author__avatar {
@@ -322,11 +326,5 @@
           background-color: #333;
           color: #fff;
         }
-      }
-    }
-
-    @media (max-width: 768px) {
-      .additional-logos {
-        display: none;
       }
     }

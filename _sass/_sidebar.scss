@@ -9,9 +9,15 @@
 .sidebar {
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
+  
+  background-color: #fafafa;
+  /* The vertical line */
+
+  border-right: 3px solid var(--neutral-300);
+  box-sizing: border-box;
 
   @include clearfix();
-  margin-bottom: 1em;
+  margin-bottom: em;
 
   @media screen and (min-width: $sidebar-screen-min-width) {
     height: 100vh;
@@ -79,7 +85,7 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 36px;
+  width: 45px;
   // set width only, for non-square avatars
   // height: 36px;
 

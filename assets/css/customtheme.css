@@ -1,0 +1,234 @@
+/*******************************************************
+  Consulting-Flex CSS (No Layout or Font-Size Changes)
+  ------------------------------------------------------
+  Author: [Your Name]
+  Description: A flexible, polished UI/UX "consulting vibe" 
+               style overlay, now with a darker navbar
+               and a white page background.
+*******************************************************/
+
+/* ----------------------------------------------
+   1) Global Custom Properties (Design Tokens)
+   ---------------------------------------------- 
+   Adjust the entire palette, transitions, etc. here.
+*/
+:root {
+    /* Darker primary color for navbar, headings, etc. */
+    --primary-color: #000033;        /* Very dark navy for nav and headings */
+    --primary-color-hover: #000025;  /* Slightly darker on hover */
+  
+    /* Accent color for links, highlights, etc. (unchanged) */
+    --accent-color: #005bb5;
+    --accent-color-hover: #00418c; 
+  
+    /* Subtle neutrals for backgrounds, borders, etc. (unchanged) */
+    --neutral-100: #f7f9fb;  
+    --neutral-200: #edf1f5;  
+    --neutral-300: #dee3e8;  
+    --neutral-500: #999;     
+    --neutral-700: #666;     
+  
+    /* Main text color */
+    --text-color: #333;
+  
+    /* Timing for transitions & animations */
+    --fast-transition: 0.15s;
+    --base-transition: 0.3s;
+    --slow-transition: 0.5s;
+  
+    /* Example shadow presets */
+    --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+    /* Optional gradient */
+    --gradient-1: linear-gradient(135deg, #000033 0%, #000025 100%);
+  }
+  
+  /* ----------------------------------------------
+     2) Body & Text Colors
+     ---------------------------------------------- 
+     Revert to a plain white background.
+  */
+
+  /* Keep headings with primary color but no layout changes */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
+  }
+  
+  /* ----------------------------------------------
+     3) Global Links
+     ---------------------------------------------- */
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--fast-transition) ease, 
+                text-decoration var(--fast-transition) ease;
+  }
+  
+  /* Hover in bold (instead of underline) */
+  a:hover,
+  a:focus {
+    color: var(--accent-color-hover);
+    font-weight: bold;
+  }
+  
+  /* ----------------------------------------------
+     4) Navigation
+     ---------------------------------------------- 
+     Darker color with white text.
+  */
+  .site-nav {
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: background-color var(--base-transition) ease;
+  }
+  
+  .site-nav a {
+    color: #fff;
+    transition: color var(--fast-transition) ease;
+  }
+  
+  .site-nav a:hover, 
+  .site-nav a:focus {
+    color: var(--accent-color);
+    text-decoration: none;  /* remove underline in nav */
+  }
+  
+  /* If you want a gradient nav bar, uncomment:
+  .site-nav {
+    background: var(--gradient-1);
+  }
+  */
+
+  /* ----------------------------------------------
+     6) Footer 
+     ---------------------------------------------- 
+     Also uses the darker primary color with white text.
+  */
+  .site-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    transition: background-color var(--base-transition) ease;
+  }
+  
+  .site-footer a {
+    color: var(--accent-color);
+    transition: color var(--fast-transition) ease;
+  }
+  
+  .site-footer a:hover {
+    color: var(--accent-color-hover);
+  }
+  
+  /* ----------------------------------------------
+     7) Buttons 
+     ---------------------------------------------- 
+     Color only, no size changes.
+  */
+  .btn {
+    background-color: var(--accent-color);
+    color: #fff !important;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--fast-transition) ease, 
+                box-shadow var(--fast-transition) ease;
+  }
+  
+  .btn:hover, 
+  .btn:focus {
+    background-color: var(--accent-color-hover);
+    box-shadow: var(--shadow-medium);
+  }
+  
+  /* Outlined button style */
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color) !important;
+    transition: background-color var(--fast-transition) ease, 
+                color var(--fast-transition) ease;
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--accent-color);
+    color: #fff !important;
+  }
+  
+  /* ----------------------------------------------
+     8) Tables & Data (unchanged)
+     ---------------------------------------------- */
+  table {
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid var(--neutral-300);
+  }
+  
+  /* Row striping */
+  tbody tr:nth-child(even) {
+    background-color: var(--neutral-100);
+  }
+  
+  /* ----------------------------------------------
+     9) Code Blocks (unchanged)
+     ---------------------------------------------- */
+  code, pre {
+    background-color: #f4f4f4;
+    color: #c7254e;
+    transition: background-color var(--fast-transition) ease;
+  }
+  
+  /* ----------------------------------------------
+     10) Card-Like Elements (unchanged)
+     ---------------------------------------------- */
+  .card, 
+  .post-card {
+    background-color: #fff;
+    border: 1px solid var(--neutral-300);
+    box-shadow: var(--shadow-light);
+    transition: box-shadow var(--fast-transition) ease, 
+                background-color var(--fast-transition) ease;
+  }
+  
+  .card:hover, 
+  .post-card:hover {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  /* ----------------------------------------------
+     11) Extra Transitions & UX Flourishes
+     ---------------------------------------------- */
+  .fade-in {
+    opacity: 0;
+    animation: fade-in var(--slow-transition) forwards ease-in-out;
+  }
+  @keyframes fade-in {
+    to { opacity: 1; }
+  }
+  
+  .hover-scale {
+    transition: transform var(--fast-transition) ease;
+  }
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+  
+  /* ----------------------------------------------
+     12) University Logos (Optional)
+     ---------------------------------------------- */
+  .university-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    filter: grayscale(100%);
+  }
+  .university-logos img {
+    height: 40px; 
+    object-fit: contain;
+  }
+
+

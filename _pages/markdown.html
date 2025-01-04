@@ -1,0 +1,176 @@
+---
+permalink: /Contact/
+author_profile: true
+redirect_from: 
+  - /md/
+  - /markdown.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="expertise-intro">
+      <h2>What I am actually working on?</h2>
+      <p>
+        I’ve gained experience in both research labs and corporate environments, working with organizations ranging from small startups to large enterprises. This has allowed me to develop a balanced perspective, combining technical expertise in AI and machine learning with the understanding of business strategy and implementation. </p>
+    </div>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .expertise-section {
+            margin: 10px ; /* Reduced margin above the table */
+            padding: 8px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .expertise-title {
+            text-align: center;
+            font-size: 24px;
+            color: #000033;
+            margin-bottom: 5px;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .expertise-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        .expertise-table th,
+        .expertise-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .expertise-table th {
+            background-color: #000033;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .expertise-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .toggle-button,
+        .expertise-section {
+            margin: 20px auto;
+            max-width: 900px;
+        }
+
+        .calendly-container {
+            display: flex; /* Initially shown */
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .calendly-embed {
+            width: 100%;
+            max-width: 800px;
+            height: 900px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+        }
+
+        .toggle-button {
+            background-color: #000033;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: #000033;
+        }
+
+        @media (max-width: 768px) {
+            .calendly-embed {
+                width: 100%;
+                height: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="expertise-section">
+        <h2 class="expertise-title">Specializations</h2>
+        <table class="expertise-table">
+            <thead>
+                <tr>
+                    <th>Domain</th>
+                    <th>Description</th>
+                    <th>Key Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Technical ML/AI Consulting</td>
+                    <td>Advising on end-to-end development of machine learning models and systems.</td>
+                    <td>Model Optimization, Deployment, MLOps</td>
+                </tr>
+                <tr>
+                    <td>AI Strategy</td>
+                    <td>Developing strategic roadmaps for integrating AI into business processes.</td>
+                    <td>Strategic Planning, KPI Definition, ROI Analysis</td>
+                </tr>
+                <tr>
+                    <td>Custom AI Solutions</td>
+                    <td>Creating AI-driven tools tailored to specific industries or needs.</td>
+                    <td>NLP, Computer Vision,, Time-Series Analysis, Supervised/Unsupervised/Reinforcement Learning</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h1>Are you interested in a collaboration?</h1>
+        <p>Use the button below to toggle the Calendly meeting scheduler and book a first free meeting to discuss your need in more details.</p>
+        <button class="toggle-button" onclick="toggleCalendly()">Hide Scheduler</button>
+        <div class="calendly-container" id="calendlyContainer">
+            <iframe 
+                src="https://calendly.com/d/cnq9-zkh-rcg/15-minute-meeting" 
+                class="calendly-embed" 
+                scrolling="no">
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the Calendly iframe visibility
+        function toggleCalendly() {
+            const calendlyContainer = document.getElementById('calendlyContainer');
+            const toggleButton = document.querySelector('.toggle-button');
+            if (calendlyContainer.style.display === 'none' || calendlyContainer.style.display === '') {
+                calendlyContainer.style.display = 'flex';
+                toggleButton.textContent = 'Hide Scheduler';
+            } else {
+                calendlyContainer.style.display = 'none';
+                toggleButton.textContent = 'Show Scheduler';
+            }
+        }
+    </script>
+</body>
+</html>

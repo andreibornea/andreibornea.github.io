@@ -1,0 +1,87 @@
+---
+title: "ClosedFish AI Chess Algorithm"
+excerpt: "ClosedFish is an AI-driven chess algorithm designed to enhance strategic gameplay in closed positions. As part of a collaborative 10-member team, I contributed to the evaluation, optimization, and integration processes, improving decision-making in closed board states.<br/><img src='/images/portfolio/closedfish.png'>"
+collection: portfolio
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>
+            ClosedFish is a cutting-edge chess engine designed to improve upon Stockfish by introducing specialized strategies for closed positions. It evaluates a "closedness coefficient" for each chessboard state, dynamically switching between the Stockfish engine and the ClosedFish algorithm for optimal performance.
+        </p>
+
+        <h2>Our Contributions</h2>
+        <ul>
+            <li><strong>Closedness Coefficient Framework</strong>: Designed a "closedness coefficient" system to evaluate the positional state of the board and dynamically adapt strategies for closed positions.</li>
+            <li><strong>Specialized Heuristics</strong>: Developed heuristics to assess pawn structures, piece mobility, and long-term planning for closed scenarios, addressing the limitations of traditional chess engines in such situations.</li>
+            <li><strong>Alpha-Beta Pruning Optimization</strong>: Improved the efficiency of alpha-beta pruning to better handle the computational demands of deep closed position evaluations.</li>
+            <li><strong>Neural Network Integration</strong>: Contributed to integrating an NNUE-based evaluation layer to enhance the engine’s ability to make accurate decisions in both closed and open board states.</li>
+            <li><strong>Dynamic Engine Switching</strong>: Helped implement a mechanism to seamlessly alternate between Stockfish and ClosedFish algorithms based on the closedness coefficient.</li>
+            <li><strong>Team Collaboration</strong>: Collaborated with a 10-member team to integrate features, debug issues, and refine performance for various chess scenarios.</li>
+        </ul>
+
+        <h2>Building Instructions</h2>
+        <p>
+            First, clone the repository and ensure all submodules are cloned. This includes the Stockfish engine and vcpkg dependencies.
+        </p>
+        <pre><code class="language-bash">git clone --recurse-submodules https://github.com/closedfish/closedfish.git
+cd closedfish</code></pre>
+
+        <p>
+            Next, download the NNUE data file by navigating to the Stockfish directory and running the following command:
+        </p>
+        <pre><code class="language-bash">cd external/stockfish/src
+make net</code></pre>
+
+        <p>
+            (Optional) Compile the Stockfish project for a standard and portable configuration:
+        </p>
+        <pre><code class="language-bash">make -j build ARCH=x86-64</code></pre>
+
+        <p>
+            Navigate back to the main project directory and configure the build using CMake:
+        </p>
+        <pre><code class="language-bash">cd ../../..
+cmake -B build -DCMAKE_BUILD_TYPE=Release</code></pre>
+
+        <p>
+            Finally, build the project to generate the executable:
+        </p>
+        <pre><code class="language-bash">cmake --build build</code></pre>
+
+        <p>
+            Once the build is complete, locate the compiled binary, which should be available at:
+        </p>
+        <pre><code class="language-bash">build/app/Debug/Executable.exe</code></pre>
+
+        <h2>Documentation</h2>
+        <p>Comprehensive project documentation is generated using Doxygen and hosted online at: <a href="https://closedfish-docs.netlify.app/" target="_blank">ClosedFish Documentation</a>.</p>
+
+        <h2>Getting Started</h2>
+        <p>Once the project is built, you can use the compiled executable to analyze or play chess games. Example usage:</p>
+        <pre><code class="language-bash">./Executable --analyze --game "example_game.pgn"</code></pre>
+
+        <h2>References</h2>
+        <p>
+            - ClosedFish Team. (2023). <em>Advancing Chess Strategies with Closed Position Algorithms</em>. <a href="https://github.com/closedfish/closedfish" target="_blank">GitHub Repository</a>
+        </p>
+
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License. See the <a href="https://github.com/closedfish/closedfish/blob/main/LICENSE" target="_blank">LICENSE</a> file for details.</p>
+    </div>
+</body>
+</html>

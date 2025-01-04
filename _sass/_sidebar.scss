@@ -323,4 +323,25 @@
           color: #fff;
         }
       }
+      
+      .additional-logos {
+        display: block;
+        overflow: hidden;  /* helps contain the floats */
+        margin-top: 1em;   /* optional spacing */
+      }
+    
+      /* Force each logo container to float left/right respectively */
+      .additional-logos .polytechnique {
+        float: left;
+      }
+    
+      .additional-logos .insead {
+        float: right;
+      }
+    
+      /* Make the logos smaller */
+      .additional-logos img {
+        width: 40px;  /* adjust as needed */
+        height: auto;
+      }
     }

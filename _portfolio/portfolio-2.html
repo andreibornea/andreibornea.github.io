@@ -1,6 +1,6 @@
 ---
-title: "Telco-RAG"
-excerpt: " Telco-RAG is a specialized Retrieval-Augmented Generation (RAG) framework designed to address the unique challenges of the telecommunications industry, particularly in handling the complexity and rapid evolution of 3GPP documents. <br/><img src='/images/portfolio/video_720p.gif'>"
+title: "RayTracer"
+excerpt: "RayTracer is a robust 3D rendering engine implementing advanced features such as diffuse and mirror surfaces, indirect lighting, and efficient ray-mesh intersection using BVH for high-quality and realistic visualizations. <br/><img src='/images/portfolio/cat.png'>"
 collection: portfolio
 ---
 
@@ -13,56 +13,25 @@ collection: portfolio
 <body>
     <div class="container">
         <p>
-            Telco-RAG is a specialized Retrieval-Augmented Generation (RAG) framework designed to address the unique challenges of the telecommunications industry, particularly in handling the complexity and rapid evolution of 3GPP documents.
+            RayTracer is a robust 3D rendering engine implementing advanced features such as diffuse and mirror surfaces, indirect lighting, and efficient ray-mesh intersection using a Bounding Volume Hierarchy (BVH). Designed to produce high-quality and realistic visualizations, the project demonstrates the power of ray tracing techniques.
         </p>
 
         <h2>Features</h2>
         <ul>
-            <li><strong>Custom RAG Pipeline</strong>: Specifically tailored to handle the complexities of telecommunications standards.</li>
-            <li><strong>Enhanced Query Processing</strong>: Implements a dual-stage query enhancement and retrieval process, improving the accuracy and relevance of generated responses.</li>
-            <li><strong>Hyperparameter Optimization</strong>: Optimized for the best performance by fine-tuning chunk sizes, context length, and embedding models.</li>
-            <li><strong>NN Router</strong>: A neural network-based router that enhances document retrieval efficiency while significantly reducing RAM usage.</li>
-            <li><strong>Open-Source</strong>: Freely available for the community to use, adapt, and improve.</li>
+            <li><strong>Diffuse and Mirror Surfaces</strong>: Simulates realistic surface properties with support for reflections up to five bounces.</li>
+            <li><strong>Indirect Lighting</strong>: Incorporates global illumination with recursive light bounces for enhanced realism.</li>
+            <li><strong>Antialiasing</strong>: Reduces jagged edges by casting multiple rays per pixel and averaging results for smoother images.</li>
+            <li><strong>Shadows</strong>: Implements direct lighting with shadows for realistic scene depth and clarity.</li>
+            <li><strong>Ray-Mesh Intersection with BVH</strong>: Optimizes ray tracing performance by quickly eliminating non-intersecting objects in complex scenes.</li>
         </ul>
 
-        <h2>Getting Started</h2>
-        <p>To get started with **Telco-RAG**, clone the repository and set up the environment:</p>
-        <pre><code class="language-bash">git clone https://github.com/netop-team/telco-rag.git
-cd telco-rag</code></pre>
-
-        <h3>Prerequisites</h3>
-        <p>Ensure you have the following installed:</p>
-        <ul>
-            <li>Python 3.11</li>
-            <li>Node.js</li>
-        </ul>
-        <p>Other dependencies are listed in <code>requirements.txt</code>.</p>
-
-        <h3>Installation</h3>
-        <p>Install the necessary Python packages and download the 3GPP knowledge database:</p>
-        <pre><code class="language-bash">cd ./Telco-RAG_api
-pip install -r requirements.txt
-python setup.py</code></pre>
-
-        <h3>Running the Full Pipeline</h3>
-        <p>To run the full pipeline, use the following commands:</p>
-        <pre><code class="language-bash">npm install
-npm run dev</code></pre>
-        <p>This will open two terminals: one for the frontend and one for the Telco-RAG backend. You can access the frontend via your browser at <code>http://localhost:3000/</code>.</p>
-        <p>On your first connection, ensure to specify a valid OpenAI API key in the settings.</p>
-
-        <h3>Running Only the API Server</h3>
-        <p>If you only want to run the API server, use this command:</p>
-        <pre><code class="language-bash">cd ./Telco-RAG_api
-uvicorn api.deploy_api:app --reload</code></pre>
-
-        <h2>References</h2>
+        <h2>Project Repository</h2>
         <p>
-            - Bornea, A.-L., Ayed, F., De Domenico, A., Piovesan, N., & Maatouk, A. (2024). <em>Telco-RAG: Navigating the Challenges of Retrieval-Augmented Language Models for Telecommunications</em>. <a href="https://arxiv.org/pdf/2404.15939.pdf">Read the paper</a>
+            You can find the source code and further details on the project's GitHub repository: 
+            <a href="https://github.com/andreibornea/Computer-Graphics-Projects/tree/master/Raytracer%20with%20Advanced%20Features" target="_blank">
+                GitHub - RayTracer with Advanced Features
+            </a>.
         </p>
-
-        <h2>License</h2>
-        <p>This project is licensed under the MIT License. See the <a href="https://github.com/netop-team/Telco-RAG/blob/main/LICENSE" target="_blank">LICENSE</a> file for details.</p>
     </div>
 </body>
 </html>
